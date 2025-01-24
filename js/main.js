@@ -13,11 +13,34 @@ const python = "./images/python_logo.png";
 
 const projects = [
   {
+    name: "Token Classification",
+    repoUrl: "https://github.com/Az-r-ow/TravelNER",
+    technos: [python],
+    description: `
+    We were asked to develop a solution for extracting the departure and arrival locations from a given text. Then, using this information and a train stations dataset, find the shortest path. </br></br>
+    • Corpus generation and cleaning </br>
+    • Text preprocessing techniques (Tokenization, Stemming, POS Tagging etc...) </br>
+    • Named Entity Recognition using probabilistic (HMM), sequential (LSTM, BiLSTM) and deep learning models (CamemBERT)</br>
+    • Shortest Path Algorithm (Dijkstra, A*) </br>
+    `,
+  },
+  {
+    name: "Medical Image Classification",
+    repoUrl: "https://github.com/Az-r-ow/zoidberg",
+    technos: [cpp, python],
+    description: `
+      The goal of the project was to classify torso X-ray images that have Pneumonia. The topics covered were : </br></br>
+      • Image Processing Techniques (Edge Detection, Image Segmentation, Mask Generation etc...) </br>
+      • Dimensionality Reduction using PCA</br>
+      • Image Classification using various statistical and deep learning models
+    `,
+  },
+  {
     name: "NeuralNet",
     repoUrl: "https://github.com/Az-r-ow/NeuralNet",
     technos: [cpp, python],
     description:
-      "My attempt on creating a general purpose Neural Network that can be parametrized to your liking.",
+      "My attempt on creating a Neural Network library in C++ that supports customization similar to <a href='https://keras.io/getting_started/'>keras</a>.",
   },
   {
     name: "Connect (Puissance) 4 Terminal",
@@ -32,20 +55,6 @@ const projects = [
     technos: [discord, js, mongodb, nodejs],
     description:
       "I implemented an algorithm that calculates the rarity score of an NFT in a certain Collection based on the probability of recurrence of its trait. Then the program ranks the NFTs in the collection and stores them in the Database. The user could check the rarity and rank through the discord bot made just for the project.",
-  },
-  {
-    name: "Password Vault",
-    repoUrl: "https://github.com/Az-r-ow/newpwdserver#readme",
-    technos: [mongodb, nodejs, js],
-    description:
-      "This project was the final project for the CS50 course. I used express for the backend and EJS for the front and a library for encryption called bcrypt. Nothing fancy I know ! It's sole purpose was to familiarise with the concepts learned throughout the course such as data structures, resource management and security.",
-  },
-  {
-    name: "Digital Resume",
-    technos: [html, css, js],
-    repoUrl: "https://github.com/Az-r-ow/myDigitalResume#readme",
-    description:
-      "The digital resume is the website you're currently on right now. I could've made it with some frawework, but to go with the old school theme I decided to go with jquery, html and css (and ejs but shhhhh).",
   },
   {
     name: "Discord Casino Bot",
@@ -71,7 +80,7 @@ const projectsEjs = `
         <% project.technos.forEach((tech) => { %>
           <span><img src=<%=tech %> width="50" height="50"></span>
         <% }) %>
-        <p><%=project.description%></p>
+        <p><%- project.description%></p>
         <div class="play-btn-div">
           <span><a href=<%= project.repoUrl %> target="_blank"><img src="./images/play_btn.png" height="50" width="150" alt="play_btn" /></a><span>
         </div>
@@ -97,44 +106,3 @@ $(".project-div").click(function () {
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
-
-// Using this function to wait for the promise
-const sleep = (ms) => {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-};
-
-// Getting the table rows
-let rows = document.querySelectorAll("tr");
-
-// Using the observer api to check when the element is on the screen
-const observer = new IntersectionObserver(async (entries) => {
-  entries.forEach(async (entry) => {
-    if (entry.isIntersecting) {
-      for (const row of rows) {
-        for (const td of row.children) {
-          await sleep(100);
-          if (!td.classList.length) continue;
-          td.style.opacity = 1;
-        }
-      }
-      return;
-    }
-    removeWhiteBars();
-  });
-});
-
-// When the table is visible load the rows
-let table = document.querySelector("table");
-observer.observe(table);
-
-// Getting rid of the bars
-const removeWhiteBars = () => {
-  for (let i = 0; i < rows.length; i++) {
-    for (const td of rows[i].children) {
-      if (!td.classList.length) continue;
-      td.style.opacity = 0;
-    }
-  }
-};
-
-removeWhiteBars();

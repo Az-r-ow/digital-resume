@@ -23,6 +23,11 @@ body {
   font-family: var(--font-family);
 }
 
+p,
+p > * {
+  font-family: var(--secondary-font);
+}
+
 /* Navbar */
 nav {
   background-color: black;
@@ -38,15 +43,19 @@ nav ul {
   justify-content: space-between;
 }
 
-nav li:hover {
-  color: var(--brand-orange);
+nav a {
+  color: var(--brand-white) !important;
+}
+
+nav a:hover {
+  color: var(--brand-orange) !important;
 }
 
 /* Anchor Links */
 a:link,
 a:visited {
   text-decoration: none;
-  color: inherit;
+  color: var(--brand-orange);
 }
 
 /* Main Section */
@@ -113,10 +122,8 @@ p {
 
 /* Unfolding Section */
 .unfolding-section {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
   padding: 1rem;
   line-height: 200%;
   text-align: center;
@@ -125,8 +132,16 @@ p {
 }
 
 .unfolding-section img {
+  grid-column: 2;
+  justify-self: center;
   height: 5rem;
   width: 5rem;
+}
+
+.unfolding-section p {
+  grid-column: 2;
+  justify-self: center;
+  line-height: 1.5;
 }
 
 .unfolding-section u {
@@ -139,13 +154,6 @@ p {
 
 .white-square {
   background-color: var(--brand-white);
-}
-
-/* Skills Section */
-.skills-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 /* Projects Section */
