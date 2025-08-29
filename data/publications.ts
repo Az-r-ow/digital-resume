@@ -7,6 +7,7 @@ export interface Publication {
   type: "journal" | "conference" | "workshop" | "review" | "preprint";
   status: "published" | "accepted" | "under-review" | "submitted" | "draft";
   abstract: string;
+  image?: string;
   url?: string;
   doi?: string;
   pdfUrl?: string;
