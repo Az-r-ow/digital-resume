@@ -13,6 +13,14 @@ export default function FunPage() {
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo(0, 0);
+    
+    // Apply fun page font size to html element
+    document.documentElement.classList.add('fun-page');
+    
+    // Cleanup function to remove the class when leaving the page
+    return () => {
+      document.documentElement.classList.remove('fun-page');
+    };
   }, []);
 
   const toggleProject = (index: number) => {

@@ -44,7 +44,6 @@
   --brand-black: black;
   --font-family: "Press Start 2P", cursive;
   --secondary-font: "Roboto", sans-serif;
-  font-size: 62.5%; /* Set base font size similar to original */
 }
 
 .dark {
@@ -131,4 +130,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Fun page specific styling */
+html.fun-page {
+  font-size: 62.5% !important;
 }
