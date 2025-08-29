@@ -1,18 +1,34 @@
 # Data Management
 
-This directory contains all the centralized data for your digital resume portfolio. This approach provides a single source of truth for all your content, making it easy to maintain and update.
+Th```typescript
+// Import specific data
+import { projects, publications, funProjects, experiences } from '@/data';
+
+// Import helper functions
+import { getFeaturedProjects, getFeaturedPublications, getFeaturedExperiences } from '@/data';
+
+// Import types
+import type { Project, Publication, FunProject, Experience } from '@/data';
+
+// Import configuration
+import { siteConfig } from '@/data';
+
+```contains all the centralized data for your digital resume portfolio. This approach provides a single source of truth for all your content, making it easy to maintain and update.
 
 ## Structure
 
 ```
+
 data/
-├── config.ts          # Site configuration and settings
-├── projects.ts        # Main portfolio projects
-├── publications.ts    # Academic publications and research
-├── fun-projects.ts    # Fun/personal projects (for /fun route)
-├── index.ts          # Central exports
-└── README.md         # This file
-```
+├── config.ts # Site configuration and settings
+├── projects.ts # Main portfolio projects
+├── publications.ts # Academic publications and research
+├── fun-projects.ts # Fun/personal projects (for /fun route)
+├── experiences.ts # Professional work experience
+├── index.ts # Central exports
+└── README.md # This file
+
+````
 
 ## Usage
 
@@ -30,7 +46,7 @@ import type { Project, Publication, FunProject } from "@/data";
 
 // Import configuration
 import { siteConfig } from "@/data";
-```
+````
 
 ### Adding New Projects
 
@@ -47,9 +63,15 @@ import { siteConfig } from "@/data";
    - Include DOI, authors array, and proper status
 
 3. **Fun Projects** (`fun-projects.ts`):
+
    - Add to the `funProjects` array
    - Include `technos` array for technology logos
    - Use HTML in descriptions for formatting
+
+4. **Experiences** (`experiences.ts`):
+   - Add to the `experiences` array
+   - Set `featured: true` for homepage display
+   - Include achievements, technologies, and location
 
 ### Configuration
 
@@ -105,6 +127,30 @@ Each data file includes helper functions:
   abstract: 'Brief abstract of the research...',
   doi: '10.1000/example',
   keywords: ['keyword1', 'keyword2'],
+  featured: true
+}
+```
+
+### Adding a New Experience
+
+```typescript
+// In experiences.ts
+{
+  id: 'my-new-job',
+  company: 'Amazing Company Inc.',
+  logo: '/company-logo.png',
+  title: 'Senior Data Scientist',
+  location: 'Remote',
+  startDate: 'Jan 2024',
+  endDate: 'Present',
+  description: 'Led data science initiatives and machine learning projects...',
+  achievements: [
+    'Increased model accuracy by 25%',
+    'Led team of 3 data scientists',
+    'Implemented MLOps best practices'
+  ],
+  technologies: ['Python', 'TensorFlow', 'AWS', 'Docker'],
+  type: 'full-time',
   featured: true
 }
 ```
