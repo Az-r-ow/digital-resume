@@ -1,0 +1,325 @@
+.container {
+  color: var(--brand-white);
+  background-image: url("/mobile-background.jpeg");
+  font-family: var(--font-family); /* Press Start 2P */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container *,
+.container p,
+.container p * {
+  font-family: var(--secondary-font); /* Roboto for content */
+}
+
+/* Keep headings and navigation in Press Start 2P */
+.container h1,
+.container h2,
+.container h3,
+.nav,
+.nav * {
+  font-family: var(--font-family); /* Press Start 2P */
+}
+
+.container h1 {
+  font-size: 1rem; /* Will scale with base 62.5% */
+}
+
+.container h2 {
+  font-size: 1rem;
+}
+
+.container h3 {
+  font-size: 1rem;
+}
+
+.container p {
+  font-size: 1rem;
+}
+
+/* Navbar */
+.nav {
+  background-color: black;
+  padding: 1rem;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  /* font-size: 2.5rem; Restore original size */
+  justify-content: space-between;
+  margin: 0;
+}
+
+.nav a {
+  color: var(--brand-white);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: var(--brand-orange);
+}
+
+/* Main Section */
+.section {
+  margin: 4rem 0;
+  padding: 1rem;
+}
+
+.section p {
+  font-size: 0.8rem;
+}
+
+/* Animated Title */
+.animatedTitle {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.animatedTitle h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-right: 0.15em solid var(--brand-orange);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--brand-orange);
+  }
+}
+
+/* Unfolding Section */
+.unfoldingSection {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  padding: 1rem;
+  line-height: 200%;
+  text-align: center;
+  background-color: var(--brand-white);
+  color: black;
+}
+
+.unfoldingSection img {
+  grid-column: 2;
+  justify-self: center;
+  height: 5rem;
+  width: 5rem;
+}
+
+.unfoldingSection p {
+  grid-column: 2;
+  justify-self: center;
+  line-height: 1.5;
+}
+
+.unfoldingSection a {
+  color: var(--brand-orange);
+  text-decoration: none;
+}
+
+/* Projects Section */
+.projectDiv {
+  cursor: pointer;
+  padding: 1rem;
+  border: dashed 5px var(--brand-orange);
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.projectDiv h3 {
+  margin: 0 0 1rem 0;
+}
+
+.information {
+  background-color: var(--brand-white);
+  padding: 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 8px rgba(0, 0, 0, 0.5);
+  color: black;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out,
+    padding 0.5s ease-in-out;
+}
+
+.information.visible {
+  max-height: 1000px;
+  opacity: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.information p {
+  line-height: 200%;
+}
+
+.technos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.technos img {
+  width: 50px;
+  height: 50px;
+}
+
+.playBtnDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.playBtnDiv span {
+  border-radius: 35%;
+  background-color: transparent;
+  box-shadow: 5px 5px 10px black;
+  display: block;
+}
+
+.playBtnDiv span:hover {
+  box-shadow: none;
+}
+
+.playBtnDiv img {
+  display: block;
+}
+
+/* Socials Section */
+.socialsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socialsDiv {
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.socialsDiv img {
+  margin: 1.5rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+/* Layout for the medium screens */
+@media screen and (min-width: 451px) {
+  .container {
+    background-image: url("/desktop-background.jpeg");
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 20fr 1fr;
+  }
+
+  .section {
+    grid-column: 2;
+  }
+
+  .animatedTitle h1 {
+    font-size: 3rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .projectDiv h3 {
+    font-size: 1.8rem;
+  }
+
+  .nav ul {
+    font-size: 2rem;
+    justify-content: space-around;
+  }
+
+  .section p {
+    font-size: 1.5rem;
+  }
+
+  .unfoldingSection img {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .socialsDiv img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+/* Layout for very large screens */
+@media screen and (min-width: 1024px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+
+  .nav a {
+    font-size: 3rem;
+  }
+
+  .animatedTitle h1 {
+    font-size: 5rem;
+    max-width: 750px;
+  }
+
+  .section h2 {
+    font-size: 4rem;
+  }
+
+  .section p {
+    font-size: 2rem;
+  }
+
+  .nav ul {
+    font-size: 2rem;
+    justify-content: space-around;
+  }
+
+  .unfoldingSection img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .socialsDiv img {
+    margin: 5rem;
+    height: 20rem;
+    width: 20rem;
+  }
+}
