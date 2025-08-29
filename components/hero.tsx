@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Linkedin, FileText } from "lucide-react";
+import { Linkedin, FileText, Mail } from "lucide-react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { siteConfig } from "@/data";
 
@@ -38,6 +38,12 @@ export function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4">
+              <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-md">
+                <Mail className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">
+                  {siteConfig.social.email}
+                </span>
+              </div>
               <Button
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
