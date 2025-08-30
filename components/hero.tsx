@@ -12,7 +12,8 @@ export function Hero() {
           <div className="space-y-6">
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-balance">
-                Hi, I'm <span className="text-primary">{siteConfig.name}</span>
+                Hi, I'm{" "}
+                <span className="text-primary">{siteConfig.firstName}</span>
               </h1>
               <h2 className="text-xl sm:text-2xl text-muted-foreground font-medium">
                 {siteConfig.title}
@@ -47,15 +48,6 @@ export function Hero() {
                   {siteConfig.social.email}
                 </span>
               </div>
-              <Button
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
-                url="/resume.pdf"
-                asChild
-              >
-                <FileText className="w-4 h-4 mr-2" />
-                Resume
-              </Button>
               <Button
                 variant="outline"
                 url={siteConfig.social.github}
