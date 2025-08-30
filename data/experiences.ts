@@ -9,51 +9,93 @@ export interface Experience {
   description: string;
   achievements?: string[];
   technologies?: string[];
-  type: "full-time" | "part-time" | "internship" | "contract" | "research";
+  type:
+    | "full-time"
+    | "part-time"
+    | "internship"
+    | "contract"
+    | "research"
+    | "apprenticeship"
+    | "freelance";
   featured: boolean;
 }
 
 export const experiences: Experience[] = [
   {
-    id: "techcorp-analytics",
-    company: "TechCorp Analytics",
-    logo: "/techcorp-logo.png",
-    title: "Junior Data Scientist",
-    location: "San Francisco, CA",
-    startDate: "Jan 2024",
+    id: "teads-apprenticeship",
+    company: "Teads",
+    logo: "/teads-logo.webp",
+    title: "Data Scientist",
+    location: "Montpellier, France",
+    startDate: "Oct 2024",
     endDate: "Present",
     description:
-      "Developed machine learning models for customer behavior prediction, resulting in 15% improvement in marketing campaign effectiveness. Built automated data pipelines using Python and SQL, processing over 1M records daily.",
-    technologies: ["Python", "SQL", "Machine Learning", "Data Pipelines"],
-    type: "full-time",
+      "Worked on feature selection, feature engineering, and hyperparameter tuning for bidding and cost prediction models.",
+    technologies: [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Data Pipelines",
+      "A/B Testing",
+      "Scala",
+    ],
+    type: "apprenticeship",
     featured: true,
   },
   {
-    id: "dataflow-solutions",
-    company: "DataFlow Solutions",
-    logo: "/dataflow-logo.png",
-    title: "Data Science Intern",
-    location: "New York, NY",
-    startDate: "Jun 2023",
-    endDate: "Dec 2023",
+    id: "booklink-freelance",
+    company: "Booklink",
+    logo: "/booklink-logo.webp",
+    title: "Data Science Consultant",
+    location: "Remote",
+    startDate: "Aug 2024",
+    endDate: "Present",
     description:
-      "Conducted exploratory data analysis on large datasets to identify business insights. Created interactive dashboards using Tableau and Power BI for stakeholder reporting. Collaborated with cross-functional teams on A/B testing initiatives.",
-    technologies: ["Python", "Tableau", "Power BI", "A/B Testing", "EDA"],
-    type: "internship",
+      "Implemented a Two-Tower Recommendation System, boosting user's positive interactions compared to legacy collaborative filtering.",
+    technologies: [
+      "Recommendation Systems",
+      "Python",
+      "AWS",
+      "Machine Learning",
+      "Data Pipelines",
+      "IAC",
+    ],
+    type: "freelance",
     featured: true,
   },
   {
-    id: "university-research-lab",
-    company: "University Research Lab",
-    logo: "/university-logo.png",
-    title: "Research Assistant",
-    location: "Boston, MA",
-    startDate: "Sep 2022",
-    endDate: "May 2023",
+    id: "kaliop-software-engineering",
+    company: "Kaliop",
+    logo: "/kaliop-logo.webp",
+    title: "Backend Software Engineer",
+    location: "Montpellier, France",
+    startDate: "Jan 2023",
+    endDate: "Oct 2024",
     description:
-      "Assisted in academic research on natural language processing applications. Implemented deep learning models using TensorFlow and PyTorch. Co-authored 2 research papers published in peer-reviewed journals.",
-    technologies: ["TensorFlow", "PyTorch", "NLP", "Deep Learning", "Research"],
-    type: "research",
+      "Developed solutions for large clients. Worked on a RAG-based LLM proof of concept for France's Ministry of Tourism.",
+    technologies: [
+      "LLM",
+      "Natural Language Processing",
+      "GCP",
+      "Infrastructure",
+      "GraphQL",
+      "Docker",
+    ],
+    type: "apprenticeship",
+    featured: true,
+  },
+  {
+    id: "freelance-data-software-engineer",
+    company: "Freelance",
+    logo: "/freelance-logo.png",
+    title: "Data & Software Engineer",
+    location: "Paris, France",
+    startDate: "Oct 2020",
+    endDate: "Oct 2022",
+    description:
+      "Delivered utility discord bots for clients including Partouche Casinos. Created a scoring algorithm with a discord bot to check rarity of a given NFT.",
+    technologies: ["MongoDB", "JavaScript", "Web3", "Discord API"],
+    type: "freelance",
     featured: true,
   },
 ];

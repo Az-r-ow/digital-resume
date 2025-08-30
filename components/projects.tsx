@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { getFeaturedProjects, siteConfig } from "@/data";
+import { MarkdownContent } from "@/components/ui/markdown-content";
 import Link from "next/link";
 
 export function Projects() {
@@ -34,7 +35,7 @@ export function Projects() {
                 <img
                   src={project.imageUrl || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full h-48 object-contain rounded-t-lg"
                 />
                 {project.event && (
                   <div className="absolute top-3 right-3">
@@ -63,7 +64,7 @@ export function Projects() {
                       {project.title}
                     </CardTitle>
                     <CardDescription className="text-muted-foreground text-sm leading-relaxed">
-                      {project.description}
+                      <MarkdownContent content={project.description} />
                     </CardDescription>
                   </div>
                 </div>

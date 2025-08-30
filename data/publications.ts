@@ -6,7 +6,7 @@ export interface Publication {
   year: string;
   type: "journal" | "conference" | "workshop" | "review" | "preprint";
   status: "published" | "accepted" | "under-review" | "submitted" | "draft";
-  abstract: string;
+  abstract?: string;
   image?: string;
   url?: string;
   doi?: string;
@@ -18,20 +18,20 @@ export interface Publication {
 export const publications: Publication[] = [
   {
     id: "ml-healthcare-analytics",
-    title: "Machine Learning Approaches for Predictive Healthcare Analytics",
-    authors: ["A. Chen", "M. Rodriguez", "S. Kim"],
-    journal: "Journal of Medical Informatics",
-    year: "2024",
+    title:
+      "Built to Generalize, Designed to Govern: Feature Engineering and Evolutionary Algorithms for Sustainable Water Use",
+    authors: ["Lucas Chapuis", "Antoine Azar"],
+    journal: "Environmental Data Science",
+    year: "2025",
     type: "journal",
-    status: "published",
-    abstract:
-      "This paper explores the application of ensemble machine learning methods in healthcare predictive analytics, demonstrating improved accuracy in patient outcome prediction.",
-    url: "#",
-    doi: "10.1016/j.jmi.2024.104567",
+    status: "draft",
+    // abstract: "None",
+    // url: "#",
+    // doi: "10.1016/j.jmi.2024.104567",
     keywords: [
       "machine learning",
-      "healthcare",
-      "predictive analytics",
+      "environmental science",
+      "crisis management",
       "ensemble methods",
     ],
     featured: true,

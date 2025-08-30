@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scroll animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- Font Awesome Logos -->
+    <script
+      src="https://kit.fontawesome.com/20598cc72c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- EJS -->
+    <script src="https://unpkg.com/ejs@3.1.6/ejs.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Az-r-ow's Digital Resume</title>
+  </head>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <body>
+    <header>
+      <div class="animated-title">
+        <h1>Hello There !</h1>
+      </div>
+      <nav data-aos="flip-up" data-aos-duration="2000">
+        <ul>
+          <li><a href="#skills-section">Skills</a></li>
+          <li><a href="#projects-section">Projects</a></li>
+          <li><a href="#socials-section">Socials</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- About Me Section -->
+      <section>
+        <h2>About Me</h2>
+        <div class="unfolding-section" id="about-me-section">
+          <p data-aos="fade-right" data-aos-duration="3000">
+            Hello and welcome to my digital resume, I am Antoine Azar a software
+            engineering student at Epitech Montpellier. I like to ski, program,
+            play basketball and eat. Enough about what I like, more about what I
+            can do ;) .<br />
+            Scroll for more... And don't hesitate to contact me on my
+            <a href="#socials-section"><u>socials</u></a
+            >.
+          </p>
+          <img
+            src="./images/profile_pic.png"
+            alt="Me"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+          />
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="skills-section" id="skills-section">
+        <h2>Skills</h2>
+        <table>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>C Language</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+          <tr>
+            <td>C++</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+          <tr>
+            <td>NodeJS</td>
+            <div class="increasing-jauge">
+              <td class="white-square"></td>
+              <td class="white-square"></td>
+              <td class="white-square"></td>
+              <td class="white-square"></td>
+              <td class="white-square"></td>
+            </div>
+          </tr>
+          <tr>
+            <td>AI (concepts)</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+          <tr>
+            <td>Web Dev</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+          <tr>
+            <td>SQL</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+          <tr>
+            <td>NoSQL</td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+            <td class="white-square"></td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects-section" id="projects-section">
+        <h2>Projects</h2>
+      </section>
+
+      <!-- Socials Section -->
+      <section class="socials-section">
+        <h2>Socials</h2>
+        <div class="socials-div" id="socials-section">
+          <a href="https://linkedin.com/in/antoine-azar-01"
+            ><img
+              src="./images/linkedin-logo.svg"
+              alt="linkedIn-logo"
+              data-aos="fade-right"
+          /></a>
+          <a href="https://github.com/Az-R-ow"
+            ><img
+              src="./images/github-logo.svg"
+              alt="github-logo"
+              data-aos="fade-left"
+          /></a>
+        </div>
+      </section>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script type="text/javascript" src="./js/main.js"></script>
+  </body>
+</html>

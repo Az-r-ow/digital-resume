@@ -2,7 +2,6 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  longDescription?: string;
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -17,30 +16,15 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "token-classification",
-    title: "Token Classification",
+    id: "water-scarcity-hackathon",
+    title: "Water-flow Prediction and Management",
     description:
-      "Travel NER system for extracting departure and arrival locations from text with shortest path finding.",
-    longDescription: `
-      We were asked to develop a solution for extracting the departure and arrival locations from a given text. 
-      Then, using this information and a train stations dataset, find the shortest path.
-      
-      • Corpus generation and cleaning
-      • Text preprocessing techniques (Tokenization, Stemming, POS Tagging etc...)
-      • Named Entity Recognition using probabilistic (HMM), sequential (LSTM, BiLSTM) and deep learning models (CamemBERT)
-      • Shortest Path Algorithm (Dijkstra, A*)
-    `,
-    technologies: [
-      "Python",
-      "NLP",
-      "Machine Learning",
-      "CamemBERT",
-      "LSTM",
-      "HMM",
-    ],
-    githubUrl: "https://github.com/Az-r-ow/TravelNER",
+      "Water-flow prediction model with resource management for different actors based on evolutionary algorithms.",
+    technologies: ["Python", "XGBoost", "Feature Engineering", "PCA"],
+    githubUrl: "https://github.com/lucas066001/WaterScarcity.Hackathon",
     featured: true,
     event: "🥉 Capegemini Hackathon",
+    imageUrl: "/water-scarcity.png",
     eventUrl:
       "https://www.capgemini.com/fr-fr/actualites/evenements/hackathon-water-scarcity/",
     startDate: "2024-01-01",
@@ -48,19 +32,18 @@ export const projects: Project[] = [
     status: "completed",
   },
   {
-    id: "medical-image-classification",
-    title: "Medical Image Classification",
+    id: "ovarian-cancer-segmentation",
+    title: "Ovarian Cancer Segmentation",
     description:
-      "Classification system for torso X-ray images to detect pneumonia using computer vision techniques.",
-    longDescription: `
-      The goal of the project was to classify torso X-ray images that have Pneumonia. The topics covered were:
-      
-      • Image Processing Techniques (Edge Detection, Image Segmentation, Mask Generation etc...)
-      • Dimensionality Reduction using PCA
-      • Image Classification using various statistical and deep learning models
-    `,
-    technologies: ["C++", "Python", "Computer Vision", "Deep Learning", "PCA"],
-    githubUrl: "https://github.com/Az-r-ow/zoidberg",
+      "Improved [nnUnet's](https://github.com/MIC-DKFZ/nnUNet) segmentation by incorporating [radiomics](https://en.wikipedia.org/wiki/Radiomics) and a post-processing pipeline.",
+    technologies: [
+      "PyTorch",
+      "Computer Vision",
+      "Medical Imaging",
+      "Radiomics",
+      "MONAI",
+    ],
+    imageUrl: "/correction-net.png",
     event: "🏆 PinkCC Hackathon",
     eventUrl: "https://montpellier-cancer.com/en/pinkcc-challenge-2025/",
     featured: true,
@@ -69,19 +52,41 @@ export const projects: Project[] = [
     status: "completed",
   },
   {
+    id: "token-classification",
+    title: "Token Classification",
+    description:
+      "Token classifier for extracting departure and arrival locations from text or speech with shortest train path.",
+    technologies: [
+      "Python",
+      "NLP",
+      "Machine Learning",
+      "CamemBERT",
+      "LSTM",
+      "HMM",
+      "Whisper",
+      "Shortest Path Algorithms",
+    ],
+    imageUrl: "/travel-ner.png",
+    githubUrl: "https://github.com/Az-r-ow/TravelNER",
+    featured: true,
+    startDate: "2024-01-01",
+    endDate: "2024-06-01",
+    status: "completed",
+  },
+  {
     id: "neuralnet-library",
     title: "NeuralNet Library",
     description:
-      "A custom Neural Network library in C++ with Keras-like API for easy model creation and training.",
-    longDescription:
-      "My attempt on creating a Neural Network library in C++ that supports customization similar to Keras.",
+      "A Neural Network library in C++ with Keras-like API for easy model creation and training.",
     technologies: [
       "C++",
       "Neural Networks",
       "Deep Learning",
       "Library Development",
+      "PyBind",
     ],
     githubUrl: "https://github.com/Az-r-ow/NeuralNet",
+    imageUrl: "/neural-net.png",
     featured: true,
     startDate: "2023-06-01",
     endDate: "2023-12-01",
@@ -92,25 +97,44 @@ export const projects: Project[] = [
     title: "Connect 4 Terminal Game",
     description:
       "Terminal-based Connect 4 game with AI opponent and ncurses interface.",
-    longDescription:
-      "Terminal implementation of the connect 4 game that could be enjoyed with an adversary or against the computer. The experience is powered with ncurses.",
-    technologies: ["C", "ncurses", "Game Development", "AI"],
+    technologies: [
+      "C",
+      "ncurses",
+      "Game Development",
+      "Monte Carlo Tree Search",
+      "Algorithms",
+    ],
     githubUrl: "https://github.com/Az-r-ow/connect4",
-    featured: false,
+    imageUrl: "/connect4-demo.gif",
+    featured: true,
     startDate: "2023-03-01",
     endDate: "2023-05-01",
+    status: "completed",
+  },
+  {
+    id: "x-ray-pneumonia-detection",
+    title: "X-Ray Pneumonia Detection",
+    description:
+      "Compared Deep Learning and traditional methods for detecting pneumonia in X-Ray images.",
+    technologies: [
+      "Python",
+      "Deep Learning",
+      "Computer Vision",
+      "Medical Imaging",
+      "PCA",
+    ],
+    githubUrl: "https://github.com/Az-r-ow/pneumonia-detection",
+    imageUrl: "/pneumonia-detection.png",
+    featured: true,
+    startDate: "2022-08-01",
+    endDate: "2022-12-01",
     status: "completed",
   },
   {
     id: "nft-rarity-bot",
     title: "NFT Project Ranker",
     description:
-      "Discord bot that calculates and ranks NFT rarity scores based on trait probability analysis.",
-    longDescription: `
-      I implemented an algorithm that calculates the rarity score of an NFT in a certain Collection based on the 
-      probability of recurrence of its trait. Then the program ranks the NFTs in the collection and stores them 
-      in the Database. The user could check the rarity and rank through the discord bot made just for the project.
-    `,
+      "Discord bot that calculates and ranks NFT rarity scores based on trait probability.",
     technologies: [
       "JavaScript",
       "Node.js",
@@ -119,31 +143,10 @@ export const projects: Project[] = [
       "NFT Analysis",
     ],
     githubUrl: "https://github.com/Az-r-ow/rarity-bot",
-    featured: true,
+    imageUrl: "/rarity-bot.png",
+    featured: false,
     startDate: "2022-08-01",
     endDate: "2022-12-01",
-    status: "completed",
-  },
-  {
-    id: "discord-casino-bot",
-    title: "Discord Casino Bot",
-    description:
-      "Feature-rich Discord bot with currency system and multiple casino games including BlackJack and Roulette.",
-    longDescription: `
-      I created this bot for an NFT project of casino partouche. It has its own currency system, where user can 
-      claim daily amounts of money and gamble them on games like BlackJack, High Low, Roulette and much more.
-    `,
-    technologies: [
-      "JavaScript",
-      "Node.js",
-      "Discord.js",
-      "Game Logic",
-      "Economy System",
-    ],
-    githubUrl: "https://github.com/Az-r-ow/casino-bot",
-    featured: false,
-    startDate: "2022-06-01",
-    endDate: "2022-10-01",
     status: "completed",
   },
   {
@@ -151,10 +154,6 @@ export const projects: Project[] = [
     title: "AI Tic-Tac-Toe",
     description:
       "Intelligent Tic-Tac-Toe game implementation using minimax algorithm for optimal AI gameplay.",
-    longDescription: `
-      This was an assignment from the CS50 AI course, I have my progress in the course so far on my github 
-      account with my commentary on each project in the README of the repo.
-    `,
     technologies: ["Python", "AI", "Minimax Algorithm", "Game Theory"],
     githubUrl: "https://github.com/Az-r-ow/cs50-ai",
     featured: false,

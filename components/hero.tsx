@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Linkedin, FileText, Mail } from "lucide-react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { siteConfig } from "@/data";
+import { MarkdownContent } from "@/components/ui/markdown-content";
 
 export function Hero() {
   return (
@@ -28,14 +29,16 @@ export function Hero() {
                   />
                 </div>
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed flex-1">
-                {siteConfig.bio}
-              </p>
+              <MarkdownContent
+                content={siteConfig.bio}
+                className="text-lg text-muted-foreground leading-relaxed flex-1"
+              />
             </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl hidden lg:block">
-              {siteConfig.bio}
-            </p>
+            <MarkdownContent
+              content={siteConfig.bio}
+              className="text-lg text-muted-foreground leading-relaxed max-w-2xl hidden lg:block"
+            />
 
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-md">

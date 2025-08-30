@@ -1,0 +1,308 @@
+@import "./variables.css";
+
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  background-image: var(--background-color);
+  overflow-x: hidden;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--brand-white);
+  background-image: url("../images/mobile-background.jpeg");
+  font-family: var(--font-family);
+}
+
+/* Navbar */
+nav {
+  background-color: black;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  font-size: 1.6rem;
+  justify-content: space-between;
+}
+
+nav li:hover {
+  color: var(--brand-orange);
+}
+
+/* Anchor Links */
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Main Section */
+section {
+  margin: 4rem 0;
+  padding: 1rem;
+}
+
+table {
+  height: 20vh;
+}
+
+th {
+  text-align: center;
+  width: 3%;
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* Animated Title */
+.animated-title {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.animated-title h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-right: 0.15em solid var(--brand-orange);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--brand-orange);
+  }
+}
+
+/* Unfolding Section */
+.unfolding-section {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  line-height: 200%;
+  text-align: center;
+  background-color: var(--brand-white);
+  color: black;
+}
+
+.unfolding-section img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.unfolding-section u {
+  color: var(--brand-orange);
+}
+
+.h2-inner-text {
+  color: var(--brand-orange);
+}
+
+.white-square {
+  background-color: var(--brand-white);
+}
+
+/* Skills Section */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Projects Section */
+.project-div {
+  cursor: pointer;
+  padding: 1rem;
+  border: dashed 5px var(--brand-orange);
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+.information {
+  background-color: var(--brand-white);
+  padding: 2rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 8px rgba(0, 0, 0, 0.5);
+  color: black;
+}
+
+.information p {
+  line-height: 200%;
+}
+
+.play-btn-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.play-btn-div span {
+  border-radius: 35%;
+  background-color: transparent;
+  box-shadow: 5px 5px 10px black;
+}
+
+.play-btn-div span:hover {
+  box-shadow: none;
+}
+
+/* Socials Section */
+.socials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials-div {
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.socials-div img {
+  margin: 1.5rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+/* Layout for the medium screens */
+@media screen and (min-width: 451px) {
+  body {
+    background-image: url("../images/desktop-background.jpeg");
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 20fr 1fr;
+  }
+
+  section {
+    grid-column: 2;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  nav ul {
+    font-size: 2rem;
+    justify-content: space-around;
+  }
+
+  table {
+    border-spacing: 0 2rem;
+  }
+
+  td {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .unfolding-section img {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .socials-div img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+/* Layout for very large screens */
+@media screen and (min-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+
+  nav a {
+    font-size: 4rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    font-size: 2rem;
+    justify-content: space-around;
+  }
+
+  table {
+    border-spacing: 0 3rem;
+  }
+
+  .unfolding-section img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .animated-title h1 {
+    max-width: 750px;
+  }
+
+  .socials-div img {
+    margin: 5rem;
+    height: 20rem;
+    width: 20rem;
+  }
+}
