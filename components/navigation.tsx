@@ -57,9 +57,9 @@ export function Navigation() {
               Publications
             </button>
           </div>
-          <Button url="/fun">
+          <Button url="/legacy">
             <Sparkles className="w-4 h-4 mr-2" />
-            Fun Resume
+            Fun Version (legacy)
           </Button>
         </div>
       </div>

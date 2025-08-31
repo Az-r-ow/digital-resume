@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Az-r-ow's Digital Resume",
+  title: "Antoine Azar",
   description: "Antoine Azar - MS student specializing in Big Data and AI",
   generator: "Next.js",
 };
