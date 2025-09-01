@@ -3,10 +3,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./fun.module.css";
+import styles from "./legacy.module.css";
 import { funProjects } from "@/data";
 
-export default function FunPage() {
+export default function LegacyPage() {
   const projects = funProjects;
   const [visibleProjects, setVisibleProjects] = useState<number[]>([]);
 
@@ -15,7 +15,7 @@ export default function FunPage() {
     window.scrollTo(0, 0);
     
     // Apply fun page font size to html element
-    document.documentElement.classList.add('fun-page');
+    document.documentElement.classList.add('legacy-page');
     
     // Cleanup function to remove the class when leaving the page
     return () => {
