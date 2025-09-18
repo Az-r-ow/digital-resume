@@ -68,6 +68,7 @@ export const projects: Project[] = [
     ],
     imageUrl: "/travel-ner.png",
     githubUrl: "https://github.com/Az-r-ow/TravelNER",
+    liveUrl: "https://huggingface.co/spaces/Az-r-ow/TravelNER",
     featured: true,
     startDate: "2024-01-01",
     endDate: "2024-06-01",
