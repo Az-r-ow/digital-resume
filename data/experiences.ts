@@ -69,7 +69,7 @@ export const experiences: Experience[] = [
     title: "Data Science Consultant",
     location: "Remote",
     startDate: "Aug 2024",
-    endDate: "Present",
+    endDate: "Dec 2025",
     description:
       "Implemented a Two-Tower Recommendation System, boosting user's positive interactions compared to legacy collaborative filtering.",
     technologies: [

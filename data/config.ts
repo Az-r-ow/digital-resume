@@ -5,8 +5,8 @@ export const siteConfig = {
   title: "Data Scientist & ML Engineer",
   description:
     "Portfolio showcasing data science projects, machine learning models, and research publications.",
-  bio: `I recently completed my **Master's in Computer Science** with a focus on **Data Science and AI** from [EPITECH (European Institute of Technology)](https://www.epitech.eu/). 
-  I did my undergrad in Finance and Accounting at Paris School of Business where I graduated with high distinction. I am currently researching ways to improve deep learning–based segmentation for medical images using radiomics.`,
+  bio: `I recently completed my **Master's in Computer Science** with a focus on **Data Science** from [EPITECH (European Institute of Technology)](https://www.epitech.eu/) where I graduated valedictorian.
+   I am currently researching ways to improve deep learning–based segmentation for medical images using radiomics.`,
   status: "📖 Reading",
 
   // Social links
