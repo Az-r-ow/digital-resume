@@ -22,13 +22,33 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: "voodoo-data-science",
+    company: "Voodoo",
+    logo: "/voodoo-logo.webp",
+    title: "Data Scientist",
+    location: "Paris, France",
+    startDate: "Dec 2025",
+    endDate: "Present",
+    description:
+      "Working on LTV prediction and user segmentation for games and social media apps.",
+    technologies: [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Data Pipelines",
+      "A/B Testing",
+    ],
+    type: "full-time",
+    featured: true,
+  },
+  {
     id: "teads-apprenticeship",
     company: "Teads",
     logo: "/teads-logo.webp",
     title: "Data Scientist",
     location: "Montpellier, France",
     startDate: "Oct 2024",
-    endDate: "Present",
+    endDate: "Nov 2025",
     description:
       "Worked on feature selection, feature engineering, and hyperparameter tuning for bidding and cost prediction models.",
     technologies: [
@@ -61,27 +81,6 @@ export const experiences: Experience[] = [
       "IAC",
     ],
     type: "freelance",
-    featured: true,
-  },
-  {
-    id: "kaliop-software-engineering",
-    company: "Kaliop",
-    logo: "/kaliop-logo.webp",
-    title: "Backend Software Engineer",
-    location: "Montpellier, France",
-    startDate: "Jan 2023",
-    endDate: "Oct 2024",
-    description:
-      "Developed solutions for large clients. Worked on a RAG-based LLM proof of concept for France's Ministry of Tourism.",
-    technologies: [
-      "LLM",
-      "Natural Language Processing",
-      "GCP",
-      "Infrastructure",
-      "GraphQL",
-      "Docker",
-    ],
-    type: "apprenticeship",
     featured: true,
   },
   {
