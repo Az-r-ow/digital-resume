@@ -36,6 +36,25 @@ export const publications: Publication[] = [
     ],
     featured: true,
   },
+  {
+    id: "correctionnet-abstract",
+    title:
+      "CorrectionNet: A lightweight residual refinement framework for improving medical image segmentation.",
+    authors: ["Antoine Azar", "Cally Lin", "Naryeong Kim"],
+    journal: "AACR Annual Meeting",
+    year: "2026",
+    type: "conference",
+    status: "published",
+    url: "https://doi.org/10.1158/1538-7445.AM2026-2786",
+    doi: "10.1158/1538-7445.AM2026-2786",
+    keywords: [
+      "medical imaging",
+      "deep learning",
+      "image segmentation",
+      "residual networks",
+    ],
+    featured: true,
+  },
 ];
 
 // Helper functions
